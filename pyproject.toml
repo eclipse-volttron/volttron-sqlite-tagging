@@ -12,7 +12,7 @@ packages = [ { include = "tagging", from = "src" } ]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
-volttron-lib-tagging = "^0.1.1a0"
+volttron-lib-tagging = "^0.1.1a1"
 ply = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
