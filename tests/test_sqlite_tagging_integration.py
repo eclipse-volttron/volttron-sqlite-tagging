@@ -46,7 +46,7 @@ class TestSQLiteIntegration(TaggingTestInterface):
         self.setup_sqlite(config)
         agent_path = Path(__file__).parents[1]
         tagging_agent_id = volttron_instance.install_agent(vip_identity='platform.tagging', agent_dir=agent_path,
-                                                           config_file=config, start=True)
+                                                           config_file=config)
         volttron_instance.start_agent(tagging_agent_id)
         gevent.sleep(1)
         yield "platform.tagging"
