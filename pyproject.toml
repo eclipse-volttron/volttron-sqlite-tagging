@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "volttron-sqlite-tagging"
+version = "0.1.0"
+description = "Tagging agent that implement volttron-lib-tagging and store tag data in sqlite3 database"
+authors = ["VOLTTRON Team <volttron@pnnl.gov>"]
+license = "Apache License 2.0"
+readme = "README.md"
+repository = "https://github.com/eclipse-volttron/volttron-sqlite-tagging"
+homepage = "https://github.com/eclipse-volttron/volttron-sqlite-tagging"
+keywords = []
+packages = [ { include = "tagging", from = "src" } ]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+volttron-lib-tagging = "^0.1.1a2"
+ply = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+# formatting, quality, tests
+pytest = "^6.2.5"
+mock = "^4.0.3"
+pre-commit = "^2.17.0"
+yapf = "^0.32.0"
+toml = "^0.10.2"
+isort = "^5.10.1"
+safety = "^1.10.3"
+mypy = "^0.942"
+coverage = "^6.3.2"
+pytest-cov = "^3.0.0"
+Sphinx = "^6.0.0"
+sphinx-rtd-theme = "^1.2.0"
+volttron-testing = "^0.4.1rc4"
+
+[tool.yapfignore]
+ignore_patterns = [
+    ".venv/**",
+    ".pytest_cache/**",
+    "dist/**",
+    "docs/**"
+]
+
+[tool.yapf]
+based_on_style = "pep8"
+spaces_before_comment = 4
+column_limit = 99
+split_before_logical_operator = true
+
+[build-system]
+requires = ["poetry-core>=1.2.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+volttron-sqlite-tagging = "tagging.sqlite.tagging:main"

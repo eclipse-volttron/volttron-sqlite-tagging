@@ -1,0 +1,8 @@
+{
+  "connection":{
+    "type":"sqlite",
+    "params":{
+      "database":"./test_tagging.sqlite"
+    }
+  }
+}
