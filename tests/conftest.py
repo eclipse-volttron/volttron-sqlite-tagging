@@ -37,7 +37,6 @@ volttron_src_path = Path(__file__).resolve().parent.parent.joinpath("src")
 
 assert volttron_src_path.exists()
 
-print(sys.path)
 if str(volttron_src_path) not in sys.path:
     print(f"Adding source path {volttron_src_path}")
     sys.path.insert(0, str(volttron_src_path))

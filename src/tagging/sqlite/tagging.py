@@ -38,7 +38,7 @@ from volttron import utils
 from volttron.client.messaging.health import STATUS_BAD, Status
 from volttron.utils import ClientContext
 
-__version__ = "1.1"
+__version__ = "0.1.0"
 
 utils.setup_logging()
 _log = logging.getLogger(__name__)
@@ -89,7 +89,7 @@ class SQLiteTaggingAgent(BaseTaggingAgent):
         """Initialise the tagging service.
 
         :param connection: dictionary object containing the database
-        connection details
+                           connection details
         :param table_prefix: optional prefix to be used for all tag tables
         :param kwargs: additional keyword arguments. (optional identity and
                        topic_replace_list used by parent classes)
