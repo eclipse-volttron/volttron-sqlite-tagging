@@ -88,6 +88,7 @@ Queries can combine multiple conditions with keyword AND and OR, and use the key
     # prefix for tagging data tables
     table_prefix: ""
 
+    # optional parameter to point to historian other than platform.historian
     historian_vip_identity: my.test.historian
     ```
     
