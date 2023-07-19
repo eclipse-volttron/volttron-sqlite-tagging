@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "volttron-sqlite-tagging"
-version = "0.1.0rc"
+version = "0.1.0"
 description = "Tagging agent that implement volttron-lib-tagging and store tag data in sqlite3 database"
 authors = ["VOLTTRON Team <volttron@pnnl.gov>"]
 license = "Apache License 2.0"
